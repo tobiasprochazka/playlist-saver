@@ -1,0 +1,35 @@
+﻿<Window x:Class="playlist_saver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:playlist_saver"
+        mc:Ignorable="d"
+        Title="Playlist Saver" Height="450" Width="868.34" SizeToContent="Width">
+    <Grid Margin="0,0,3.6,0">
+        <TextBox x:Name="textBoxPlaylistIdInput" HorizontalAlignment="Left" Height="18" Margin="79,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Text="PLuMfPR-AKCHJmq4q6uWgOL_5grxEALSIb"/>
+        <Button x:Name="getOnlineItemsButton" Content="get online items" HorizontalAlignment="Left" Margin="215,220,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click_GetOnlineItems"/>
+        <Label x:Name="label" Content="playlist id:" HorizontalAlignment="Left" Margin="79,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.949,-0.046"/>
+        <ListBox x:Name="listBoxOnline" HorizontalAlignment="Left" Height="378" VerticalAlignment="Top" Width="230" Margin="596,32,0,0" SelectionChanged="ListBoxOnline_SelectionChanged" RenderTransformOrigin="0.5,0.5">
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.286"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.574"/>
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+        <TextBox x:Name="textBoxPathInput" HorizontalAlignment="Left" Height="23" Margin="79,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Text="C:\Users\Toby\Music\backup\"/>
+        <Label x:Name="label1" Content="path:" HorizontalAlignment="Left" Margin="79,166,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Online content" HorizontalAlignment="Left" Margin="638,2,0,0" VerticalAlignment="Top" Height="25" Width="94"/>
+        <ListBox x:Name="listBoxOffline" HorizontalAlignment="Left" Height="378" Margin="382,32,0,0" VerticalAlignment="Top" Width="209"/>
+        <Label x:Name="label3" Content="Offline Content" HorizontalAlignment="Left" Margin="454,1,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="getOfflineItemsButton" Content="get offline items" HorizontalAlignment="Left" Margin="79,220,0,0" VerticalAlignment="Top" Width="113" Height="19" Click="ItemsButton_Click_GetOfflineItems"/>
+        <Button x:Name="button" Content="Download selected" HorizontalAlignment="Left" Margin="79,382,0,0" VerticalAlignment="Top" Width="142" Height="28" Click="Button_Click_Download"/>
+        <Label x:Name="labelId" Content="" HorizontalAlignment="Left" Margin="79,316,0,0" VerticalAlignment="Top" Height="51" Width="100"/>
+        <ProgressBar x:Name="downloadProgressBar" HorizontalAlignment="Left" Height="20" Margin="79,347,0,0" VerticalAlignment="Top" Width="142"/>
+        <Label x:Name="downloadProgressLabel" Content="download progress:" HorizontalAlignment="Left" Margin="79,321,0,0" VerticalAlignment="Top" Height="26" Width="291" FontSize="10" Opacity="0.8"/>
+
+    </Grid>
+</Window>
